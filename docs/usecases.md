@@ -12,7 +12,7 @@ The Service Consumer then utilizes the ServiceClasses for their needs. After get
 * Creates an instance of the mLab service.
   * ServiceCatalog calls provision endpoint on AnsibleServiceBroker
   * AnsibleServiceBroker provisions the mLab APB
-  * mLab APB configures the mLab instance being made avaiable
+  * mLab APB configures the mLab instance being made available
   * mLab service ready for consumption
 * Create a binding resource for the mLab service
   * ServiceCatalog calls the binding endpoint on the AnsibleServiceBroker
@@ -38,7 +38,7 @@ The Service Consumer then utilizes the ServiceClasses for their needs. After get
 ```
 Catalog Operator -> ServiceCatalog: POST broker
 ServiceCatalog -> ServiceCatalog: Create Broker resource
-Controller -> AnsibleServiceBroker: GET /catalog 
+Controller -> AnsibleServiceBroker: GET /catalog
 AnsibleServiceBroker -> Controller: List of available service classes: mLab, Go WebApp
 Controller -> ServiceCatalog: Creates list of service classes available
 Service Consumer -> ServiceCatalog: GET /serviceclasses

@@ -28,7 +28,7 @@ a user will interact with to target and authenticate with a given cluster.
 Since these clients are the source for cluster details, it makes sense to
 have them forward cluster details through the ServiceCatalog to a Broker.
 The broker can then transform them into a `CluserObject` and provide
-this object when performing an action (Provison, Bind, etc...)
+this object when performing an action (Provision, Bind, etc...)
 
 The apb contains an `oc` client which can then act on the behalf of
 the clients the user is driving and authenticated with.
