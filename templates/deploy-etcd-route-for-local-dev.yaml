@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: ansible-service-broker-etcd-route
+objects:
+
+- apiVersion: v1
+  kind: Route
+  metadata:
+    name: asb-etcd
+    labels:
+      app: ansible-service-broker
+      service: etcd
+  spec:
+    to:
+      kind: Service
+      name: etcd
+    port:
+      targetPort: ${ETCD_TARGET_PORT}
+
+parameters:
+- description: Name of the etcd target port to connect to
+  displayname: ETCD_TARGET_PORT
+  name: ETCD_TARGET_PORT
+  value: etcd-advertise
